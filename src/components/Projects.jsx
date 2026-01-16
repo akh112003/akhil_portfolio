@@ -7,31 +7,31 @@ const projects = [
         title: 'Library Management System',
         description: 'A robust Java-based application for managing college library operations, including book tracking, student records, and fine calculation. Used JDBC to connect with MySQL database.',
         tech: ['Java', 'MySQL', 'JDBC', 'Swing'],
-        github: '#',
+        github: 'https://github.com/akh112003',
         demo: null,
-        image: null // Placeholder handled in code
+        image: null
     },
     {
         title: 'CGPA & GPA Calculator',
         description: 'A web-based tool for students to easily calculate their semester GPA and cumulative CGPA. Features a user-friendly interface and dynamic result generation.',
         tech: ['HTML', 'CSS', 'JavaScript'],
-        github: '#',
+        github: 'https://github.com/akh112003',
         demo: '#',
-        image: null
+        image: '/assets/cgpa_calculator.png'
     },
     {
         title: 'Student Complaint System',
         description: 'AI-powered platform for automatic categorization and prioritization of student complaints. Reduces administrative workload by intelligently routing issues.',
         tech: ['Python', 'NLP', 'Flask', 'React'],
-        github: '#',
+        github: 'https://github.com/akh112003',
         demo: null,
-        image: null
+        image: '/assets/student_complaint.png'
     },
     {
         title: 'Facial Expression Detection',
         description: 'Real-time facial expression recognition system using Python and OpenCV. Detects emotions like happy, sad, angry, and neutral from video feed.',
         tech: ['Python', 'OpenCV', 'TensorFlow'],
-        github: '#',
+        github: 'https://github.com/akh112003',
         demo: null,
         image: null
     },
@@ -39,7 +39,7 @@ const projects = [
         title: 'Music Streaming Web App',
         description: 'A responsive UI clone of a music streaming service. Focuses on frontend design, smooth transitions, and playing functionality simulation.',
         tech: ['React', 'Tailwind CSS', 'Framer Motion'],
-        github: '#',
+        github: 'https://github.com/akh112003',
         demo: '#',
         image: null
     }
@@ -73,12 +73,17 @@ const Projects = () => {
                             onClick={() => setSelectedProject(project)}
                             className="bg-deep-blue rounded-xl overflow-hidden border border-gray-800 hover:border-neon-cyan/50 hover:shadow-[0_0_15px_rgba(0,255,255,0.1)] transition-all cursor-pointer group"
                         >
-                            <div className="h-48 bg-gray-800 relative overflow-hidden flex items-center justify-center">
-                                {/* Placeholder for Project Screenshot */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-deep-blue to-transparent opacity-60"></div>
-                                <span className="text-gray-500 font-mono text-xl group-hover:scale-110 transition-transform duration-500">
-                                    project_img_{index + 1}.jpg
-                                </span>
+                            <div className="h-48 bg-gray-800 relative overflow-hidden flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
+                                {project.image ? (
+                                    <img src={project.image} alt={project.title} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
+                                ) : (
+                                    <>
+                                        <div className="absolute inset-0 bg-gradient-to-t from-deep-blue to-transparent opacity-60"></div>
+                                        <span className="text-gray-500 font-mono text-xl">
+                                            {project.title.substring(0, 3)}
+                                        </span>
+                                    </>
+                                )}
                             </div>
                             <div className="p-6">
                                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-neon-cyan transition-colors">{project.title}</h3>
@@ -120,10 +125,14 @@ const Projects = () => {
                                 <X size={24} />
                             </button>
 
-                            <div className="h-64 bg-gray-800 relative flex items-center justify-center">
-                                <span className="text-gray-500 font-mono text-xl">
-                                    {selectedProject.title} Screenshot
-                                </span>
+                            <div className="h-64 bg-gray-800 relative flex items-center justify-center overflow-hidden">
+                                {selectedProject.image ? (
+                                    <img src={selectedProject.image} alt={selectedProject.title} className="w-full h-full object-cover" />
+                                ) : (
+                                    <span className="text-gray-500 font-mono text-xl">
+                                        {selectedProject.title} Screenshot
+                                    </span>
+                                )}
                             </div>
 
                             <div className="p-8">

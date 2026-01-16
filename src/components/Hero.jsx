@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowDown, Github, Linkedin, Download } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, ExternalLink } from 'lucide-react';
 
 const Hero = () => {
     const [text, setText] = useState('');
@@ -69,10 +69,10 @@ const Hero = () => {
                             <ArrowDown size={18} className="group-hover:translate-y-1 transition-transform" />
                         </a>
 
-                        <button className="px-8 py-3 bg-neon-cyan/10 border border-neon-cyan text-neon-cyan rounded hover:bg-neon-cyan/20 transition-all duration-300 font-mono flex items-center gap-2">
-                            Download Resume
-                            <Download size={18} />
-                        </button>
+                        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="px-8 py-3 bg-neon-cyan/10 border border-neon-cyan text-neon-cyan rounded hover:bg-neon-cyan/20 transition-all duration-300 font-mono flex items-center gap-2">
+                            View Resume
+                            <ExternalLink size={18} />
+                        </a>
                     </motion.div>
                 </motion.div>
             </div>
