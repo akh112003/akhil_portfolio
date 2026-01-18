@@ -17,7 +17,7 @@ const projects = [
         tech: ['HTML', 'CSS', 'JavaScript'],
         github: 'https://github.com/akh112003',
         demo: '#',
-        image: '/assets/cgpa_calculator.png'
+        image: '/assets/cgpa-calculator-new.png'
     },
     {
         title: 'Student Complaint System',
@@ -26,22 +26,6 @@ const projects = [
         github: 'https://github.com/akh112003',
         demo: null,
         image: '/assets/student_complaint.png'
-    },
-    {
-        title: 'Facial Expression Detection',
-        description: 'Real-time facial expression recognition system using Python and OpenCV. Detects emotions like happy, sad, angry, and neutral from video feed.',
-        tech: ['Python', 'OpenCV', 'TensorFlow'],
-        github: 'https://github.com/akh112003',
-        demo: null,
-        image: null
-    },
-    {
-        title: 'Music Streaming Web App',
-        description: 'A responsive UI clone of a music streaming service. Focuses on frontend design, smooth transitions, and playing functionality simulation.',
-        tech: ['React', 'Tailwind CSS', 'Framer Motion'],
-        github: 'https://github.com/akh112003',
-        demo: '#',
-        image: null
     }
 ];
 

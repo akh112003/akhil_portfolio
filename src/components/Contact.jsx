@@ -10,17 +10,39 @@ const Contact = () => {
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitted, setSubmitted] = useState(false);
+    const [error, setError] = useState(null);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
-        // Simulate form submission
-        setTimeout(() => {
-            setIsSubmitting(false);
+        setError(null);
+
+        const GOOGLE_FORM_ACTION_URL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLScb-jjfKBiTtvhKjEPmYbq5C7X4s9kMqHKo6VREp6RK8dbk2g/formResponse";
+
+        const formBody = new FormData();
+        formBody.append("entry.867078297", formData.name);
+        formBody.append("entry.838770644", formData.email);
+        formBody.append("entry.77917669", formData.message);
+
+        try {
+            await fetch(GOOGLE_FORM_ACTION_URL, {
+                method: "POST",
+                body: formBody,
+                mode: "no-cors",
+            });
+            // Since we use no-cors, we can't check response.ok, so we assume success if no error is thrown
             setSubmitted(true);
             setFormData({ name: '', email: '', message: '' });
-            setTimeout(() => setSubmitted(false), 3000);
-        }, 1500);
+        } catch (err) {
+            console.error("Form submission error:", err);
+            setError("Something went wrong. Please try again later.");
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
+    const closePopup = () => {
+        setSubmitted(false);
     };
 
     return (
@@ -81,8 +103,9 @@ const Contact = () => {
                         initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="bg-dark-bg p-8 rounded-2xl border border-gray-800"
+                        className="bg-dark-bg p-8 rounded-2xl border border-gray-800 relative"
                     >
+                        {/* Form */}
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div>
                                 <label className="block text-gray-400 text-sm font-mono mb-2">Name</label>
@@ -118,16 +141,14 @@ const Contact = () => {
                                 ></textarea>
                             </div>
 
+                            {error && <p className="text-red-500 text-sm">{error}</p>}
+
                             <button
                                 type="submit"
                                 disabled={isSubmitting}
                                 className="w-full bg-gradient-to-r from-neon-green/20 to-neon-cyan/20 border border-neon-cyan text-neon-cyan font-bold py-3 rounded-lg hover:from-neon-green/30 hover:to-neon-cyan/30 transition-all flex items-center justify-center gap-2 group disabled:opacity-50"
                             >
-                                {isSubmitting ? (
-                                    'Sending...'
-                                ) : submitted ? (
-                                    'Message Sent!'
-                                ) : (
+                                {isSubmitting ? 'Sending...' : (
                                     <>
                                         Send Message
                                         <Send size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -135,6 +156,29 @@ const Contact = () => {
                                 )}
                             </button>
                         </form>
+
+                        {/* Success Popup Overlay */}
+                        {submitted && (
+                            <div className="absolute inset-0 flex items-center justify-center bg-dark-bg/95 rounded-2xl z-10 transition-all duration-300">
+                                <motion.div
+                                    initial={{ scale: 0.8, opacity: 0 }}
+                                    animate={{ scale: 1, opacity: 1 }}
+                                    className="text-center p-6"
+                                >
+                                    <div className="w-16 h-16 bg-neon-green/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-neon-green">
+                                        <Send size={32} className="text-neon-green" />
+                                    </div>
+                                    <h4 className="text-2xl font-bold text-white mb-2">Message Sent!</h4>
+                                    <p className="text-gray-400 mb-6">Thanks for reaching out! I'll get back to you soon.</p>
+                                    <button
+                                        onClick={closePopup}
+                                        className="px-6 py-2 bg-neon-cyan/20 border border-neon-cyan text-neon-cyan rounded-lg hover:bg-neon-cyan/30 transition-colors"
+                                    >
+                                        Close
+                                    </button>
+                                </motion.div>
+                            </div>
+                        )}
                     </motion.div>
                 </div>
             </div>
