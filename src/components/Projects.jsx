@@ -4,12 +4,12 @@ import { Github, ExternalLink, X } from 'lucide-react';
 
 const projects = [
     {
-        title: 'Library Management System',
-        description: 'A robust Java-based application for managing college library operations, including book tracking, student records, and fine calculation. Used JDBC to connect with MySQL database.',
-        tech: ['Java', 'MySQL', 'JDBC', 'Swing'],
+        title: 'Student Complaint System',
+        description: 'AI-powered platform for automatic categorization and prioritization of student complaints. Reduces administrative workload by intelligently routing issues.',
+        tech: ['Python', 'NLP', 'Flask', 'React'],
         github: 'https://github.com/akh112003',
         demo: null,
-        image: null
+        image: '/assets/student_complaint.png'
     },
     {
         title: 'CGPA & GPA Calculator',
@@ -17,15 +17,15 @@ const projects = [
         tech: ['HTML', 'CSS', 'JavaScript'],
         github: 'https://github.com/akh112003',
         demo: '#',
-        image: '/assets/cgpa-calculator-new.png'
+        image: '/assets/cgpa_calculator.png'
     },
     {
-        title: 'Student Complaint System',
-        description: 'AI-powered platform for automatic categorization and prioritization of student complaints. Reduces administrative workload by intelligently routing issues.',
-        tech: ['Python', 'NLP', 'Flask', 'React'],
+        title: 'Employee Leave Management System',
+        description: 'A comprehensive web application for managing employee leave requests, approvals, and tracking. Streamlines HR processes with role-based access control.',
+        tech: ['Java', 'JSP', 'JDBC', 'MySQL'],
         github: 'https://github.com/akh112003',
         demo: null,
-        image: '/assets/student_complaint.png'
+        image: null
     }
 ];
 
