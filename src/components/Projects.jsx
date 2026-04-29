@@ -18,14 +18,6 @@ const projects = [
         github: 'https://github.com/akh112003',
         demo: '#',
         image: '/assets/cgpa_calculator.png'
-    },
-    {
-        title: 'Employee Leave Management System',
-        description: 'A comprehensive web application for managing employee leave requests, approvals, and tracking. Streamlines HR processes with role-based access control.',
-        tech: ['Java', 'JSP', 'JDBC', 'MySQL'],
-        github: 'https://github.com/akh112003',
-        demo: null,
-        image: null
     }
 ];
 
