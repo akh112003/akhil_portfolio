@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Terminal, Github, Linkedin, FileText, Mail, ChevronDown } from 'lucide-react';
+import { Terminal, Github, Linkedin, FileText, Mail, ChevronDown, Instagram, Phone } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -13,7 +13,6 @@ const Hero = () => {
           className="lg:col-span-4"
         >
           <div className="glass-card p-8 rounded-3xl relative overflow-hidden group">
-            {/* Abstract Background Element */}
             <div className="absolute -top-10 -right-10 w-32 h-32 bg-primary-blue/20 rounded-full blur-2xl group-hover:bg-primary-blue/30 transition-colors"></div>
             
             <div className="w-20 h-20 bg-primary-blue/10 rounded-2xl flex items-center justify-center mb-8 border border-primary-blue/20">
@@ -26,22 +25,35 @@ const Hero = () => {
             </h1>
             
             <div className="space-y-4 mb-8">
-              <div className="flex items-center gap-3 text-slate-400 hover:text-white transition-colors cursor-pointer group/item">
+              <a href="mailto:akhilharikuttan104@gmail.com" className="flex items-center gap-3 text-slate-400 hover:text-white transition-colors cursor-pointer group/item">
                 <div className="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover/item:bg-primary-blue/20 group-hover/item:text-primary-blue">
                   <Mail size={16} />
                 </div>
                 <span className="text-sm">akhilharikuttan104@gmail.com</span>
-              </div>
+              </a>
             </div>
 
-            <div className="flex gap-4">
-              <a href="#" className="flex-1 bg-primary-blue hover:bg-blue-600 text-white py-3 rounded-xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-primary-blue/20 font-bold text-sm">
-                <FileText size={18} />
-                RESUME
-              </a>
+            <div className="flex flex-col gap-3">
+              <div className="flex gap-4">
+                <a href="#" className="flex-1 bg-primary-blue hover:bg-blue-600 text-white py-3 rounded-xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-primary-blue/20 font-bold text-sm">
+                  <FileText size={18} />
+                  RESUME
+                </a>
+              </div>
               <div className="flex gap-2">
-                <a href="#" className="w-12 h-12 bg-slate-800 hover:bg-slate-700 rounded-xl flex items-center justify-center transition-colors">
-                  <Linkedin size={20} className="text-white" />
+                <a href="https://github.com/akh112003" target="_blank" rel="noopener noreferrer" className="w-full bg-slate-800 hover:bg-slate-700 rounded-xl flex items-center justify-center py-3 transition-colors text-white">
+                  <Github size={18} className="mr-2" /> <span className="text-xs font-bold">GITHUB</span>
+                </a>
+              </div>
+              <div className="flex gap-2">
+                <a href="https://www.linkedin.com/in/akhil-kk-8993b2344" target="_blank" rel="noopener noreferrer" className="flex-1 bg-slate-800 hover:bg-[#0077b5] rounded-xl flex items-center justify-center py-3 transition-colors text-white">
+                  <Linkedin size={20} />
+                </a>
+                <a href="https://instagram.com/a_k_h._i_l" target="_blank" rel="noopener noreferrer" className="flex-1 bg-slate-800 hover:bg-[#e4405f] rounded-xl flex items-center justify-center py-3 transition-colors text-white">
+                  <Instagram size={20} />
+                </a>
+                <a href="https://wa.me/918547946228" target="_blank" rel="noopener noreferrer" className="flex-1 bg-slate-800 hover:bg-[#25d366] rounded-xl flex items-center justify-center py-3 transition-colors text-white">
+                  <Phone size={20} />
                 </a>
               </div>
             </div>
@@ -64,7 +76,7 @@ const Hero = () => {
             <div className="flex items-center gap-6">
               <div className="h-px flex-1 bg-slate-800"></div>
               <p className="max-w-md text-lg text-slate-400 leading-relaxed text-right italic">
-                Expected Graduation: 2026. Building the future of technology with focus on AI and high-performance software.
+                Expected Graduation: 2026. Currently looking for internships and opportunities to work on exciting projects.
               </p>
             </div>
           </div>

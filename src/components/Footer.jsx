@@ -10,9 +10,9 @@ const Footer = () => {
         </div>
         
         <div className="flex items-center gap-8">
-          <a href="#" className="text-sm text-slate-400 hover:text-primary-blue transition-colors">GitHub</a>
-          <a href="#" className="text-sm text-slate-400 hover:text-primary-blue transition-colors">LinkedIn</a>
-          <a href="#" className="text-sm text-slate-400 hover:text-primary-blue transition-colors">Twitter</a>
+          <a href="https://github.com/akh112003" target="_blank" rel="noopener noreferrer" className="text-sm text-slate-400 hover:text-primary-blue transition-colors">GitHub</a>
+          <a href="https://www.linkedin.com/in/akhil-kk-8993b2344" target="_blank" rel="noopener noreferrer" className="text-sm text-slate-400 hover:text-primary-blue transition-colors">LinkedIn</a>
+          <a href="https://instagram.com/a_k_h._i_l" target="_blank" rel="noopener noreferrer" className="text-sm text-slate-400 hover:text-primary-blue transition-colors">Instagram</a>
         </div>
         
         <p className="text-xs text-slate-600 font-mono">
