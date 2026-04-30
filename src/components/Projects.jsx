@@ -23,7 +23,7 @@ const projects = [
         title: 'Aura - Healthcare AI Chatbot',
         description: 'An advanced AI-powered health assistant that predicts potential diseases from symptoms and provides empathetic, medically-grounded advice and precautions.',
         tech: ['Next.js', 'React', 'Tailwind CSS', 'Framer Motion'],
-        github: 'https://github.com/akh112003/healthcare-bot',
+        github: 'https://github.com/akh112003/akhil_portfolio/tree/main/healthcare-bot-source',
         demo: null,
         image: '/assets/healthcare_bot.png'
     }
