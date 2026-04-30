@@ -21,8 +21,8 @@ const Hero = () => {
             </div>
             
             <span className="text-primary-blue font-mono text-sm tracking-widest uppercase mb-2 block">Hello, I am</span>
-            <h1 className="text-5xl font-extrabold mb-6 leading-tight">
-              AKHIL <span className="text-primary-blue italic">REDDY</span>
+            <h1 className="text-5xl font-extrabold mb-6 leading-tight uppercase">
+              AKHIL <span className="text-primary-blue italic">KK</span>
             </h1>
             
             <div className="space-y-4 mb-8">
@@ -30,7 +30,7 @@ const Hero = () => {
                 <div className="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover/item:bg-primary-blue/20 group-hover/item:text-primary-blue">
                   <Mail size={16} />
                 </div>
-                <span className="text-sm">akhilreddyyar989@gmail.com</span>
+                <span className="text-sm">akhilharikuttan104@gmail.com</span>
               </div>
             </div>
 
@@ -57,14 +57,14 @@ const Hero = () => {
         >
           <div className="space-y-6">
             <h2 className="text-6xl sm:text-8xl font-black text-white leading-none tracking-tighter">
-              SENIOR <br />
-              <span className="text-slate-800 outline-text">SOFTWARE</span> <br />
+              COMPUTER <br />
+              <span className="text-slate-800 outline-text uppercase">SCIENCE</span> <br />
               ENGINEER
             </h2>
             <div className="flex items-center gap-6">
               <div className="h-px flex-1 bg-slate-800"></div>
               <p className="max-w-md text-lg text-slate-400 leading-relaxed text-right italic">
-                Building high-performance cloud solutions and backend architectures with precision and scalability.
+                Expected Graduation: 2026. Building the future of technology with focus on AI and high-performance software.
               </p>
             </div>
           </div>

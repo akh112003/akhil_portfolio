@@ -20,13 +20,13 @@ const About = () => {
           
           <div className="space-y-6 text-lg text-slate-400 leading-relaxed">
             <p>
-              I am a passionate <span className="text-white font-bold">Senior Software Engineer</span> dedicated to crafting exceptional digital experiences. With a deep focus on building scalable backend architectures and high-performance cloud solutions, I strive to merge technical precision with creative problem-solving.
+              I am a passionate <span className="text-white font-bold">Computer Science Engineer</span> expected to graduate in 2026. I am dedicated to crafting exceptional digital experiences and building the next generation of technology.
             </p>
             <p>
-              My approach focuses on <span className="text-primary-blue font-medium italic underline decoration-primary-blue/30 underline-offset-4">clean code, efficient design patterns</span>, and leveraging the latest AI-driven technologies to solve complex real-world problems.
+              My approach focuses on <span className="text-primary-blue font-medium italic underline decoration-primary-blue/30 underline-offset-4">clean code, efficient design patterns</span>, and leveraging AI to solve complex real-world problems.
             </p>
             <p>
-              When I'm not coding, I'm exploring new technologies, contributing to open-source projects, and constantly pushing the boundaries of what's possible in the software ecosystem.
+              Currently focusing on full-stack development and artificial intelligence, I am always pushing the boundaries of my technical skills and building projects that make a difference.
             </p>
           </div>
 

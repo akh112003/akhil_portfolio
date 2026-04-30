@@ -5,8 +5,8 @@ const Footer = () => {
     <footer className="py-12 border-t border-white/5 mt-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
         <div>
-          <h3 className="text-xl font-black text-white tracking-tight">AKHIL <span className="text-primary-blue">REDDY</span></h3>
-          <p className="text-xs text-slate-500 mt-1 uppercase tracking-[0.3em] font-bold">Software Engineer</p>
+          <h3 className="text-xl font-black text-white tracking-tight uppercase">AKHIL <span className="text-primary-blue">KK</span></h3>
+          <p className="text-xs text-slate-500 mt-1 uppercase tracking-[0.3em] font-bold">Computer Science Engineer</p>
         </div>
         
         <div className="flex items-center gap-8">
