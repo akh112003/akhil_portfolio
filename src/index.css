@@ -4,19 +4,45 @@
 
 @layer base {
   body {
-    @apply bg-dark-bg text-gray-300 font-sans overflow-x-hidden selection:bg-neon-green selection:text-black;
+    @apply bg-dark-navy text-slate-gray font-sans overflow-x-hidden selection:bg-primary-blue selection:text-white;
   }
 
   html {
     scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-white font-bold;
   }
 }
 
-.circuit-bg {
-  background-image: radial-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
-    radial-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px);
-  background-size: 50px 50px;
-  background-position: 0 0, 25px 25px;
-  mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+@layer components {
+  .glass {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10;
+  }
+  
+  .glass-card {
+    @apply bg-slate-900/40 backdrop-blur-md border border-slate-800 hover:border-primary-blue/30 transition-all duration-300;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-navy;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-800 rounded-full hover:bg-slate-700 transition-colors;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
 }

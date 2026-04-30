@@ -1,20 +1,26 @@
 import React from 'react';
-import { Heart } from 'lucide-react';
 
 const Footer = () => {
-    return (
-        <footer className="py-8 bg-black text-center border-t border-gray-900">
-            <p className="text-gray-500 flex items-center justify-center gap-2">
-                Designed & Developed by <span className="text-neon-green font-mono">Akhil</span>
-            </p>
-            <div className="flex items-center justify-center gap-1 mt-2 text-xs text-gray-600">
-                <span>Built with React</span>
-                <Heart size={12} className="text-red-500 animate-pulse" />
-                <span>& Tailwind</span>
-            </div>
-            <p className="text-gray-700 text-xs mt-2">© 2026 All rights reserved.</p>
-        </footer>
-    );
+  return (
+    <footer className="py-12 border-t border-white/5 mt-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div>
+          <h3 className="text-xl font-black text-white tracking-tight">AKHIL <span className="text-primary-blue">REDDY</span></h3>
+          <p className="text-xs text-slate-500 mt-1 uppercase tracking-[0.3em] font-bold">Software Engineer</p>
+        </div>
+        
+        <div className="flex items-center gap-8">
+          <a href="#" className="text-sm text-slate-400 hover:text-primary-blue transition-colors">GitHub</a>
+          <a href="#" className="text-sm text-slate-400 hover:text-primary-blue transition-colors">LinkedIn</a>
+          <a href="#" className="text-sm text-slate-400 hover:text-primary-blue transition-colors">Twitter</a>
+        </div>
+        
+        <p className="text-xs text-slate-600 font-mono">
+          &copy; {new Date().getFullYear()} All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;
