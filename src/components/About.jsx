@@ -20,7 +20,7 @@ const About = () => {
           
           <div className="space-y-6 text-lg text-slate-400 leading-relaxed">
             <p>
-              I am a passionate <span className="text-white font-bold">Computer Science Engineer</span> expected to graduate in 2026. I am dedicated to crafting exceptional digital experiences and building the next generation of technology.
+              I am a passionate <span className="text-white font-bold">Computer Science Engineer</span>, graduated in 2026. I am dedicated to crafting exceptional digital experiences and building the next generation of technology.
             </p>
             <p>
               My approach focuses on <span className="text-primary-blue font-medium italic underline decoration-primary-blue/30 underline-offset-4">clean code, efficient design patterns</span>, and leveraging AI to solve complex real-world problems.
