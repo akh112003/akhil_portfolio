@@ -29,25 +29,6 @@ const About = () => {
               Currently focusing on full-stack development and artificial intelligence, I am always pushing the boundaries of my technical skills and building projects that make a difference.
             </p>
           </div>
-
-          <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-8">
-            <div>
-              <h4 className="text-3xl font-black text-white mb-1">2+</h4>
-              <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">Years Experience</p>
-            </div>
-            <div>
-              <h4 className="text-3xl font-black text-white mb-1">15+</h4>
-              <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">Projects Built</p>
-            </div>
-            <div>
-              <h4 className="text-3xl font-black text-white mb-1">10+</h4>
-              <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">Happy Clients</p>
-            </div>
-            <div>
-              <h4 className="text-3xl font-black text-white mb-1">24/7</h4>
-              <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">Availability</p>
-            </div>
-          </div>
         </motion.div>
       </div>
     </section>
