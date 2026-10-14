@@ -76,7 +76,7 @@ const Hero = () => {
             <div className="flex items-center gap-6">
               <div className="h-px flex-1 bg-slate-800"></div>
               <p className="max-w-md text-lg text-slate-400 leading-relaxed text-right italic">
-                Expected Graduation: 2026. Currently looking for internships and opportunities to work on exciting projects.
+                Graduated in 2026.
               </p>
             </div>
           </div>
